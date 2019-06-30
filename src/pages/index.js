@@ -6,6 +6,7 @@ import Layout from 'components/Layout'
 import Link from 'components/Link'
 import { useTheme } from 'components/Theming'
 import Container from 'components/Container'
+import Technologies from 'components/Technologies'
 import { rhythm } from '../lib/typography'
 
 const Hero = () => {
@@ -36,7 +37,7 @@ const Hero = () => {
             max-width: ${rhythm(15)};
           `}
         >
-          Your blog says the things you want to say.
+          Hola! Let's build great software together
         </h1>
       </Container>
       <div
@@ -57,53 +58,73 @@ const Description = styled.p`
 export default function Index({ data: { site, allMdx } }) {
   const theme = useTheme()
   return (
-    <Layout site={site}>
-      <Hero />
-      <Container
-        css={css`
-          padding-bottom: 0;
-        `}
-      >
-        {allMdx.edges.map(({ node: post }) => (
-          <div
-            key={post.id}
+    <React.Fragment>
+      <Layout site={site}>
+        <Hero />
+        <Container
+          css={css`
+            padding-bottom: 0;
+          `}
+        >
+          <p
             css={css`
-              margin-bottom: 40px;
+              font-size: 14px;
             `}
           >
-            <h2
-              css={css({
-                marginBottom: rhythm(0.3),
-                transition: 'all 150ms ease',
-                ':hover': {
-                  color: theme.colors.primary,
-                },
-              })}
+            I'm Belén Abad, software engineer and entrepreneur from Cuenca -
+            Ecuador. My passion is to build and deliver quality software to
+            clients and employees. When I'm not in front of the computer or in a
+            business meeting I play with my 4 dogs, sing, and lift weights at
+            the gym. I'm currently open to new job opportunities
+          </p>
+        </Container>
+        <Technologies />
+        <Container
+          css={css`
+            padding-bottom: 0;
+          `}
+        >
+          {allMdx.edges.map(({ node: post }) => (
+            <div
+              key={post.id}
+              css={css`
+                margin-bottom: 40px;
+              `}
             >
-              <Link
-                to={post.frontmatter.slug}
-                aria-label={`View ${post.frontmatter.title}`}
+              <h2
+                css={css({
+                  marginBottom: rhythm(0.3),
+                  transition: 'all 150ms ease',
+                  ':hover': {
+                    color: theme.colors.primary,
+                  },
+                })}
               >
-                {post.frontmatter.title}
-              </Link>
-            </h2>
-            <Description>
-              {post.excerpt}{' '}
-              <Link
-                to={post.frontmatter.slug}
-                aria-label={`View ${post.frontmatter.title}`}
-              >
-                Read Article →
-              </Link>
-            </Description>
-          </div>
-        ))}
-        <Link to="/blog" aria-label="Visit blog page">
-          View all articles
-        </Link>
-        <hr />
-      </Container>
-    </Layout>
+                <Link
+                  to={post.frontmatter.slug}
+                  aria-label={`View ${post.frontmatter.title}`}
+                >
+                  {post.frontmatter.title}
+                </Link>
+              </h2>
+              <Description>
+                {post.excerpt}{' '}
+                <Link
+                  to={post.frontmatter.slug}
+                  aria-label={`View ${post.frontmatter.title}`}
+                >
+                  Read Article →
+                </Link>
+              </Description>
+            </div>
+          ))}
+          <Link to="/blog" aria-label="Visit blog page">
+            View all articles
+          </Link>
+          <hr />
+        </Container>
+      </Layout>
+    </React.Fragment>
   )
 }
 

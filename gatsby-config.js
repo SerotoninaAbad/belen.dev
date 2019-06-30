@@ -12,16 +12,12 @@ module.exports = {
     title: config.siteTitle,
     twitterHandle: config.twitterHandle,
     description: config.siteDescription,
-    keywords: ['Video Blogger'],
+    keywords: config.keywords,
     canonicalUrl: config.siteUrl,
     image: config.siteLogo,
     author: {
       name: config.author,
-      minibio: `
-        <strong>egghead</strong> is the premier place on the internet for 
-        experienced developers to enhance their skills and stay current
-        in the fast-faced field of web development.
-      `,
+      minibio: config.minibio,
     },
     organization: {
       name: config.organization,
@@ -128,7 +124,7 @@ module.exports = {
                   edges {
                     node {
                       excerpt(pruneLength: 250)
-                      fields { 
+                      fields {
                         slug
                         date
                       }

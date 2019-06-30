@@ -148,12 +148,9 @@ export default ({
 
   const [themeName, setTheme] = useState(initializeTheme)
 
-  useEffect(
-    () => {
-      localStorage.setItem('theme', themeName)
-    },
-    [themeName],
-  )
+  useEffect(() => {
+    localStorage.setItem('theme', themeName)
+  }, [themeName])
 
   const toggleTheme = name => setTheme(name)
   const theme = {
