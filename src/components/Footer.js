@@ -18,7 +18,7 @@ const Footer = ({ author, noSubscribeForm }) => (
         <div>
           <h2>Get in touch</h2>
           <p>
-            Find me on twitter, instagram, linkedin, github, or email me at
+            Find me on twitter, github, linkedin, or email me at
             <a href="mailto:belen@almendra.com.ec"> belen@almendra.com.ec</a>
           </p>
           <br />
