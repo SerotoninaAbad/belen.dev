@@ -73,8 +73,8 @@ export default function Index({ data: { site, allMdx } }) {
           >
             I'm Belén Abad, software engineer and entrepreneur from Cuenca -
             Ecuador. My passion is to build and deliver quality software to
-            clients and employees. When I'm not in front of the computer or in a
-            business meeting I play with my 4 dogs, sing, and lift weights at
+            clients and employeers. When I'm not in front of the computer or in
+            a business meeting I play with my 4 dogs, sing, and lift weights at
             the gym. I'm currently open to new job opportunities
           </p>
         </Container>

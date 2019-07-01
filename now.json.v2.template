@@ -3,8 +3,8 @@
     "NODE_ENV": "production",
     "GOOGLE_ANALYTICS": "GA_GOES_HERE"
   },
-  "name": "PROJECT_NAME",
-  "alias": ["DOMAIN_NAME", "www.DOMAIN_NAME"],
+  "name": "belen.dev",
+  "alias": ["belen.dev"],
   "version": 2,
   "regions": ["sfo1", "gru1", "bru1"],
   "builds": [

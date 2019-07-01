@@ -1,7 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/core'
 import { bpMaxSM } from '../lib/breakpoints'
-import SubscribeForm from './Forms/Subscribe'
 import { Twitter, GitHub, LinkedIn } from './Social'
 import Container from './Container'
 
@@ -17,7 +16,11 @@ const Footer = ({ author, noSubscribeForm }) => (
     >
       {!noSubscribeForm && (
         <div>
-          <SubscribeForm />
+          <h2>Get in touch</h2>
+          <p>
+            Find me on twitter, instagram, linkedin, github, or email me at
+            <a href="mailto:belen@almendra.com.ec"> belen@almendra.com.ec</a>
+          </p>
           <br />
           <br />
         </div>
