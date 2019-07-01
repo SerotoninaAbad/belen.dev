@@ -66,11 +66,7 @@ export default function Index({ data: { site, allMdx } }) {
             padding-bottom: 0;
           `}
         >
-          <p
-            css={css`
-              font-size: 14px;
-            `}
-          >
+          <p>
             I'm Belén Abad, software engineer and entrepreneur from Cuenca -
             Ecuador. My passion is to build and deliver quality software to
             clients and employeers. When I'm not in front of the computer or in

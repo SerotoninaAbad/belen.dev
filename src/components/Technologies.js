@@ -13,17 +13,26 @@ const Technologies = props => {
         background-color: ${theme.colors.techBg};
       `}
     >
-      <Container
-        css={css`
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          flex-wrap: wrap;
-        `}
-      >
-        {technologies.map(item => (
-          <Icon {...item} />
-        ))}
+      <Container>
+        <p
+          css={css`
+            color: ${theme.colors.iconText};
+          `}
+        >
+          These are some technologies that I have been using recently:
+        </p>
+        <div
+          css={css`
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+          `}
+        >
+          {technologies.map(item => (
+            <Icon {...item} />
+          ))}
+        </div>
       </Container>
     </div>
   )
