@@ -80,50 +80,6 @@ export default function Index({ data: { site, allMdx } }) {
           <h3>Portfolio</h3>
           <Portfolio></Portfolio>
         </Container>
-        <Container
-          css={css`
-            padding-bottom: 0;
-          `}
-        >
-          {allMdx.edges.map(({ node: post }) => (
-            <div
-              key={post.id}
-              css={css`
-                margin-bottom: 40px;
-              `}
-            >
-              <h2
-                css={css({
-                  marginBottom: rhythm(0.3),
-                  transition: 'all 150ms ease',
-                  ':hover': {
-                    color: theme.colors.primary,
-                  },
-                })}
-              >
-                <Link
-                  to={post.frontmatter.slug}
-                  aria-label={`View ${post.frontmatter.title}`}
-                >
-                  {post.frontmatter.title}
-                </Link>
-              </h2>
-              <Description>
-                {post.excerpt}{' '}
-                <Link
-                  to={post.frontmatter.slug}
-                  aria-label={`View ${post.frontmatter.title}`}
-                >
-                  Read Article →
-                </Link>
-              </Description>
-            </div>
-          ))}
-          <Link to="/blog" aria-label="Visit blog page">
-            View all articles
-          </Link>
-          <hr />
-        </Container>
       </Layout>
     </React.Fragment>
   )
