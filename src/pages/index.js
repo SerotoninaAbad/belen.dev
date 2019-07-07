@@ -8,6 +8,7 @@ import { useTheme } from 'components/Theming'
 import Container from 'components/Container'
 import Technologies from 'components/Technologies'
 import { rhythm } from '../lib/typography'
+import Portfolio from 'components/Portfolio'
 
 const Hero = () => {
   const theme = useTheme()
@@ -75,6 +76,10 @@ export default function Index({ data: { site, allMdx } }) {
           </p>
         </Container>
         <Technologies />
+        <Container>
+          <h3>Portfolio</h3>
+          <Portfolio></Portfolio>
+        </Container>
         <Container
           css={css`
             padding-bottom: 0;
