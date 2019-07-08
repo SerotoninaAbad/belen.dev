@@ -29,6 +29,7 @@ const Hero = () => {
           display: flex;
           flex-direction: row;
           padding-bottom: 0;
+          flex-wrap: wrap;
         `}
       >
         <h1
@@ -46,7 +47,7 @@ const Hero = () => {
         <img
           css={css`
             padding: 0;
-            max-width: 300px;
+            max-width: 275px;
             margin: 0;
           `}
           src="hola.png"
