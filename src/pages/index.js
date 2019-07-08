@@ -18,14 +18,17 @@ const Hero = () => {
         color: ${theme.colors.white};
         width: 100%;
         background: ${theme.colors.primary};
-        padding: 20px 0 30px 0;
+        padding: 20px 0 0 0;
+        padding-bottom: 0;
         display: flex;
+        background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
       `}
     >
       <Container
         css={css`
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
+          padding-bottom: 0;
         `}
       >
         <h1
@@ -40,6 +43,15 @@ const Hero = () => {
         >
           Hola! Let's build great software together
         </h1>
+        <img
+          css={css`
+            padding: 0;
+            max-width: 300px;
+            margin: 0;
+          `}
+          src="hola.png"
+          alt="hola.png"
+        />
       </Container>
       <div
         css={css`

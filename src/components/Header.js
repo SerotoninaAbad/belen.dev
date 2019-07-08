@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => {
         flex-shrink: 0;
         background: none;
         padding: 20px 0;
-        background: ${theme.colors.headerBg};
+        background: #fe5196;
       `}
     >
       <Container noVerticalPadding>
